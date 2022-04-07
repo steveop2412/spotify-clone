@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c&lif@0l@p0(jz=ss#a$!of^en)mb@iec%qxf&x@)9)%=95m@x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1','spotify-clone-django.herokuapp.com']
 
 
 # Application definition
