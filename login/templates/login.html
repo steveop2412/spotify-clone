@@ -1,0 +1,112 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Spotify</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-------------------Favicon ---->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/fav2.png' %}"/>
+    <!-------------------Google reCaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!----------------Tailwind CDN--->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!----------------Font Awesome--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% tailwind_css %}
+</head>
+<body class="bg-black">
+    <!-------------------Navbar------>
+    <section class="text-white py-10">
+        <div class="spot-title flex justify-center items-center mb-5">
+            <i class="fa fa-spotify text-green-500 fa-3x mr-2"></i>
+        <a href="{% url 'home' %}"><h1 class="sm:text-2xl text-xl font-medium">Spotify&#174;</h1></a>
+        </div>
+        <hr>
+        <h1 class="text-sm font-semibold text-center mt-10  mb-4">To continue, log in to Spotify.</h1>
+        <div class="sign-btn mb-8">
+            <button class="fb-btn flex justify-center items-center mb-5 mx-auto font-bold border-0 py-2 px-8 md:w-1/3 w-1/2 sm:w-1/2 w-4/5 focus:outline-none rounded-full sm:text-sm text-xs"><i class="fa fa-facebook text-xl mr-5"></i>Continue with Facebook</button>
+            <button class="bg-white text-black flex justify-center items-center mb-5 mx-auto font-bold py-2 px-8 md:w-1/3 w-1/2 sm:w-1/2 w-4/5 focus:outline-none rounded-full sm:text-sm text-xs"><i class="fa fa-apple text-xl mr-5"></i>Continue with Apple</button>
+            <button class="flex justify-center items-center mb-5 mx-auto font-bold border-2 border-white py-3 px-8 md:w-1/3 w-1/2 sm:w-1/2 w-4/5 focus:outline-none rounded-full sm:text-sm text-xs"><img src="{% static 'images/g-icon.png' %}" class="w-5 mr-5"></i>Continue with Google</button>
+            <a href="{% url 'signmob' %}"><button class="flex justify-center items-center mb-5 mx-auto font-bold border-2 border-white py-3 px-8 md:w-1/3 w-1/2 sm:w-1/2 w-4/5 focus:outline-none rounded-full sm:text-sm text-xs">Continue with Phone Number</button></a>
+        </div>
+        <!-------------Form-->
+        <h1 class="text-center or-h1 text-xs tracking-widest">OR</h1>
+        <div class="block p-6 rounded-lg shadow-lg mx-auto md:w-5/12 w-7/12 sm:w-7/12 w-11/12">
+            <form class="sign-form">
+              <div class="form-group mb-6">
+                <label for="exampleInputEmail1" class="form-label text-start inline-block mb-2 text-white">Email address or username</label>
+                <input type="email" class="form-control
+                  block
+                  w-full
+                  px-3
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" placeholder="Email address or username">
+              </div>
+              <div class="form-group mb-6">
+                <label for="exampleInputPassword1" class="form-label inline-block mb-2 text-white">Password</label>
+                <input type="password" class="form-control block
+                  w-full
+                  px-3
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword1"
+                  placeholder="Password">
+              </div>
+            <!------  Checkboxes-->
+            <h1 class="text-base hover:underline cursor-pointer sm:mb-0 mb-5">Forgout your password?</h1>
+                  <div class="btn-together flex justify-between">
+                    <div class="form-group flex items-center form-check mb-6">
+                        <input type="checkbox"
+                          class="form-check-input appearance-none h-3 w-3 border border-gray-300 rounded-sm bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                          id="exampleCheck1">
+                        <label class="form-check-label text-md inline-block text-white" for="exampleCheck1">Remember Me</label>
+                      </div>
+                  <div class="submit-btn flex justify-center">
+                    <button type="submit" class="mb-6 px-10
+                    py-4 w-full
+                    bg-green-500
+                    text-black
+                    font-semibold
+                    text-base
+                    uppercase
+                    leading-tight
+                    rounded-full
+                    shadow-md
+                    transition
+                    duration-150
+                    ease-in-out">Log In</button>
+                  </div>
+                  </div>
+            </form>
+            <hr>
+            <div class="log-link flex flex-col place-items-center mt-6">
+                <span class="text-lg font-semibold mb-6">Don't have an account?</span>
+                <a href="{% url 'signup' %}" class="w-full flex justify-center items-center mb-5 mx-auto font-bold border-2 border-white py-2 px-8 focus:outline-none rounded-full text-sm">Sign up for Spotify</button></a>
+            </div>
+          </div>
+    </section>
+</body>
+</html>

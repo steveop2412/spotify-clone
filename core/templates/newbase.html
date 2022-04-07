@@ -1,0 +1,24 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    {% block title %}
+	<title>Django Tailwind</title>
+    {% endblock title %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-----------------Custom CSS-->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<!-------------------Favicon ---->
+		<link rel="shortcut icon" type="image/png" href="{% static 'images/fav2.png' %}"/>
+		<!----------------Font Awesome--->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		{% tailwind_css %}
+	</head>
+	<body class="i-body">
+		{% include 'navbar.html' %}
+		{% block content %}{% endblock content %}
+		{% include 'footer.html' %}
+	</body>
+</html>

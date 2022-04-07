@@ -1,0 +1,218 @@
+@import "https://unpkg.com/open-props";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap');
+*
+{
+    font-family: 'Poppins', cursive;
+}
+
+.hero-section
+{
+    background-color: #2941AB;
+}
+.get-started{
+    background-color: #1D75DE;
+}
+.search-section input[type=text]
+{
+    padding-left: 30px;
+}
+.i-body
+{
+    background-color: #2941AB;
+}
+.search-section
+{
+    background-color: #293D98;
+}
+.premium-bg
+{
+    background-color: #1D75DE;
+}
+button:hover
+{
+    transform: scale(103%);
+}
+.hero-title
+{
+    color: #1ED760;
+}
+.get-spotify
+{
+    color: #2941AB;
+}
+.get-spotify:hover
+{
+    background-color: #1ED760;
+}
+.icons .fa
+{
+    background-color: #222326;
+    color: #fff;
+}
+.card
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.search-field:focus .fa-search
+{
+    color: black;
+}
+.search-section input[type=text]::placeholder {
+    color: #666;
+    padding-left: 20px;
+}
+.links-section
+{
+    background-color: #EEEEEE;
+}
+.links-section a
+{
+    color: #117A37;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+.links-section a:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.comm-btn
+{
+    background-color: #1FDF64;
+}
+.dwn-section
+{
+    background-color: #19E68C;
+}
+.dwn-section h1
+{
+    font-size: 2.8rem;
+}
+.fa-laptop
+{
+    transform: scale(2);
+}
+.listening-section
+{
+    background-color: #222326;
+}
+@media only screen and (max-width: 769px) {
+    .app-icons
+    {
+        flex-direction: column;
+    }
+    .app-icons button
+    {
+        margin-bottom: 10px;
+    }
+    .devices
+    {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons button
+    {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .term-n-c h6{
+        font-size: 10px;
+    }
+    .btn-together{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-title
+    {
+        transform: scale(1.1);
+    }
+    .mobile-menu
+    {
+        min-height: 100vh;
+    }
+}
+.plat-section button
+{
+    transform: scale(0.7);
+}
+.plat-section button:hover
+{
+    transform: scale(72%);
+}
+.p-features img:hover
+{
+    transform: scale(103%);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.sign-btn .fb-btn
+{
+    background-color: #384F81;
+}
+form label
+{
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.sign-form::placeholder
+{
+    font-size: 1px;
+}
+
+.fa-check-circle{
+    animation: var(--animation-slide-in-up) forwards;
+    animation-timing-function: var(--ease-squish-3);
+}
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+      }
+.form-sect select{
+    padding-left: 10px;
+}
+.or-h1
+{
+  margin: 10px auto;
+  text-align: center;
+  max-width: 420px;
+  position: relative;
+}
+.or-h1:before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: #999;
+    left: 0;
+    opacity: 0.5;
+    top: 50%;
+    position: absolute;
+  }
+  
+.or-h1:after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: #999;
+    opacity: 0.5;
+    right: 0;
+    top: 50%;
+    position: absolute;
+  }
+  .divider::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    margin-top: 35px;
+}

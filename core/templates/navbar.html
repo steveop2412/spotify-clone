@@ -1,0 +1,58 @@
+<!-------------------Navbar------>
+<header class="text-gray-600 bg-black body-font">
+    <div class="hidden md:flex container-fluid mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a href="{% url 'home' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <i class="fa fa-spotify fa-3x ml-5 text-green-400"></i>
+        <span class="ml-3 text-2xl font-semibold logo text-white">Spotify</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="{% url 'premium' %}" class="mr-8 font-medium text-white hover:text-green-400 cursor-pointer">Premium</a>
+        <a href="{% url 'support' %}" class="mr-8 font-medium text-white hover:text-green-400 cursor-pointer">Support</a>
+        <a href="{% url 'download' %}" class="mr-8 font-medium pr-8 text-white border-r-2 border-White hover:text-green-400 cursor-pointer">Download</a>
+        <a href="{% url 'signup' %}" class="mr-8 font-medium pl-2 text-gray-300 hover:text-green-400 cursor-pointer">Sign up</a>
+        <a href="{% url 'login' %}" class="mr-8 font-medium text-gray-300 hover:text-green-400 cursor-pointer">Log in</a>
+      </nav>
+    </div>
+    <!-- Mobile menu button -->
+                <div class="md:hidden flex justify-between">
+        <div class="logo mt-6">
+          <a href="{% url 'home' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <i class="fa fa-spotify fa-3x ml-5 text-green-400"></i>
+            <span class="ml-3 text-2xl font-semibold logo text-white">Spotify</span>
+          </a>
+        </div>
+                    <button class="outline-none mobile-menu-button mr-2">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu px-10">
+            <ul class="">
+                <li><a href="{% url 'premium' %}" class="block text-white text-2xl px-2 py-4 hover:bg-green-500 transition duration-300">Premium</a></li>
+                <li><a href="{% url 'support' %}" class="block text-white text-2xl px-2 py-4 hover:bg-green-500 transition duration-300">Support</a></li>
+                <li><a href="{% url 'download' %}" class="block text-white divider text-2xl px-2 py-4 hover:bg-green-500 transition duration-300">Download</a></li>
+                <li><a href="{% url 'signup' %}" class="block mt-10 text-lg text-gray-300 px-2 py-4 hover:bg-green-500 transition duration-300">Sign up</a></li>
+                <li><a href="{% url 'login' %}" class="block text-lg text-gray-300 px-2 py-4 hover:bg-green-500 transition duration-300">Log in</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+  </header>

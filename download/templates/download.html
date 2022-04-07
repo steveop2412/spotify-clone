@@ -1,0 +1,96 @@
+{% extends 'newbase.html' %}
+{% load static %}
+{% block title %}
+<title>Windows Download - Spotify</title>
+{% endblock title %}
+{% block content %}
+<!----------------Download Section ------>
+<section class="dwn-section text-black body-font">
+    <div class="container px-5 py-20 mx-auto">
+      <div class="text-center mt-10 md:mb-10 mb-4 relative">
+          <i class="fa fa-check-circle fa-2x absolute inset-x-2 inset-y-2"></i>
+          <i class="fa fa-laptop fa-4x mb-10"></i>
+        <h1 class="sm:text-3xl text-2xl md:text-5xl text-3xl font-bold title-font text-black mb-4">Download Spotify</h1>
+      </div>
+      <div class="text-center mb-10">
+        <span class="sm:text-base text-sm font-normal text-black mb-2">Play millions of songs and podcasts on your device.</span>
+      </div>
+      <button class="bg-white flex mb-10 mx-auto font-bold text-black border-0 py-4 px-8 focus:outline-none rounded-full text-sm">Download</button>
+    </div>
+  </section>
+  <!----------------Platform Section ------>
+<section class="plat-section text-black bg-white body-font">
+    <div class="container px-5 py-14 mx-auto">
+      <div class="text-center mt-2 md:mb-10 mb-4">
+        <h1 class="sm:text-2xl text-xl md:text-3xl text-2xl font-bold title-font text-black mb-4">Bring your music to mobile and tablet, too.</h1>
+      </div>
+      <div class="text-center mb-10">
+        <span class="sm:text-base text-sm font-normal text-black mb-2">Listening on your phone or tablet is free, easy, and fun.</span>
+      </div>
+      <!-----------------------------GP AP MS-->
+      <div class="app-icons relative p-2 flex justify-center">
+        <button class="flex flex-col text-white bg-black border-0 py-2 px-8 focus:outline-none rounded-xl text-2xl"><i class="fa fa-apple fa-2x absolute left-3 mt-1"></i><span class="text-sm ml-6">Download on the</span><span class="mx-auto ml-6">App Store</span></button>
+        <button class="flex text-white bg-black border-0 py-2 px-2 focus:outline-none rounded-xl text-2xl"><img src="{% static 'images/g-play.png' %}" class="object-cover object-center"><div class="g-play-text flex flex-col mt-auto mb-auto"><span class="text-sm mx-auto">Get it in on</span><span class="mx-auto ml-1">Google Play</span></div></button>
+        <button class="flex text-white bg-black border-0 py-2 px-2 focus:outline-none rounded-xl text-2xl"><img src="{% static 'images/microsoft.png' %}" class="object-cover object-center"><div class="mirco-text flex flex-col mt-auto mb-auto"><span class="text-sm mx-auto">Get it from</span><span class="mx-auto ml-2">Microsoft</span></div></button>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------Listening Section-->
+  <section class="listening-section text-black body-font">
+    <div class="container px-24 py-10 mx-auto">
+      <div class="text-center mt-10 md:mb-10 mb-4">
+        <img src="{% static 'images/device-removebg.png' %}" alt="" class="object-cover object-center invert mx-auto">
+        <h1 class="sm:text-3xl text-2xl md:text-4xl text-3xl font-bold title-font text-white mb-4">One account, listen everywhere.</h1>
+      </div>
+      <!-----------------------------Devices-->
+      <div class="flex flex-wrap devices -m-4 text-center justify-center">
+        <div class="md:p-4 p-2 sm:p-2 p-1 md:w-1/9">
+          <div class="flex flex-col md:mt-0 mt-10 rounded-lg">
+            <span class="uppercase text-white text-base font-medium mb-2">Mobile</span> 
+          </div>
+        </div>
+        <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-white text-base font-medium mb-2">Computer</span>   
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-white text-base font-medium mb-2">Tablet</span>
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-green-600 text-base font-medium underline hover:text-green-500 cursor-pointer mb-2">Car</span>
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-green-600 text-base font-medium underline hover:text-green-500 cursor-pointer mb-2">Playstation</span>
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-green-600 text-base font-medium underline hover:text-green-500 cursor-pointer mb-2">Xbox</span>
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-green-600 text-base font-medium underline hover:text-green-500 cursor-pointer mb-2">tv</span>
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-green-600 text-base font-medium underline hover:text-green-500 cursor-pointer mb-2">Speaker</span>
+            </div>
+          </div>
+          <div class="md:p-4 p-1 md:w-1/9">
+            <div class="flex flex-col rounded-lg">
+                <span class="uppercase text-green-600 text-base font-medium underline hover:text-green-500 cursor-pointer mb-2">Web Player</span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}

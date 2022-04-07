@@ -1,0 +1,248 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up - Spotify</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-------------------Favicon ---->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/fav2.png' %}"/>
+    <!-------------------Google reCaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!----------------Font Awesome--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% tailwind_css %}
+</head>
+<body class="bg-black">
+    <!-------------------Navbar------>
+    <section class="text-white py-10">
+        <div class="spot-title flex justify-center items-center mb-10">
+            <i class="fa fa-spotify text-green-500 fa-3x mr-2"></i>
+        <a href="{% url 'home' %}"><h1 class="sm:text-2xl text-xl font-medium">Spotify&#174;</h1></a>
+        </div>
+        <h1 class="md:text-3xl text-2xl font-semibold text-center mb-10">Sign up for free to start listening.</h1>
+        <div class="sign-btn mb-8">
+            <button class="fb-btn flex justify-center items-center mb-5 mx-auto font-bold border-0 py-2 px-8 md:w-1/3 w-1/2 sm:w-1/2 w-4/5 focus:outline-none rounded-full md:text-sm text-xs"><i class="fa fa-facebook text-xl sm:mr-5 mr-3"></i>Sign up with Facebook</button>
+            <button class="flex justify-center items-center mb-5 mx-auto font-bold border-2 border-white py-3 px-8 md:w-1/3 w-1/2 sm:w-1/2 w-4/5 focus:outline-none rounded-full md:text-sm text-xs"><img src="{% static 'images/g-icon.png' %}" class="w-5 sm:mr-5 mr-3"></i>Sign up with Google</button>
+        </div>
+        <!-------------Form-->
+        <h1 class="text-center text-gray-300 or-h1 tracking-widest">or</h1>
+        <div class="block p-6 rounded-lg shadow-lg mx-auto md:w-5/12 w-7/12 sm:w-7/12 w-11/12">
+            <form class="sign-form">
+              <div class="form-group mb-6">
+                <label for="Email" class="form-label text-start inline-block mb-2 text-white">What's your email?</label>
+                <input type="email" class="form-control
+                  block
+                  w-full
+                  px-3
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" placeholder="Enter your email.">
+                <a href="{% url 'signmob' %}"><span id="emailHelp" class="block mt-1 text-sm underline text-green-500 hover:text-green-400">Use phone number instead</span></a>
+              </div>
+              <div class="form-group mb-6">
+                <label for="ConfirmEmail" class="form-label inline-block mb-2 text-white">Confirm your email</label>
+                <input type="email" class="form-control block
+                  w-full
+                  px-3
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword1"
+                  placeholder="Enter your email again.">
+              </div>
+              <div class="form-group mb-6">
+                <label for="exampleInputPassword1" class="form-label inline-block mb-2 text-white">Create a password</label>
+                <input type="password" class="form-control block
+                  w-full
+                  px-3
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword1"
+                  placeholder="Create a password.">
+              </div>
+              <div class="form-group mb-6">
+                <label for="exampleInputPassword1" class="form-label inline-block mb-2 text-white">What should we call you?</label>
+                <input type="text" class="form-control block
+                  w-full
+                  px-3
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword1"
+                  placeholder="Enter a profile name.">
+                  <span id="emailHelp" class="block mt-2 text-xs text-gray-300">This appears on the profile</span>
+              </div>
+              <div class="form-group mb-6">
+                <label for="exampleInputPassword1" class="form-label inline-block mb-2 text-white">What's your date of birth?</label>
+                <div class="labels flex justify-between">
+                  <label for="year">Year</label>
+                  <label for="month">Month</label>
+                  <label for="day">Day</label>
+                </div>
+                <div class="date-input mt-2 flex justify-between">
+                    <input type="number" class="form-control block
+                  w-1/5
+                  px-4
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword1"
+                  placeholder="YYYY">
+                <select class="form-select appearance-none
+                    block
+                    w-2/5
+                    px-3
+                    py-1.5
+                    text-base
+                    font-normal
+                    text-gray-700
+                    bg-white bg-clip-padding bg-no-repeat
+                    border border-solid border-gray-300
+                    rounded
+                    transition
+                    ease-in-out
+                    m-0
+                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                        <option selected>Month</option>
+                        <option value="1">Januray</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                  <input type="number" class="form-control block
+                  w-1/5
+                  px-4
+                  py-2
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword1"
+                  placeholder="DD">
+                </div>
+            </div> 
+                <!---------------Gender-->
+                <label for="Gender" class="form-label inline-block mb-2 text-white">What's your gender?</label>
+                <div class="flex w-3/4 justify-between mb-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label inline-block text-white" for="inlineRadio10">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label inline-block text-white" for="inlineRadio20">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                      <label class="form-check-label inline-block text-white" for="inlineRadio30">Non-binary</label>
+                    </div>
+                  </div>
+                  <!------  Checkboxes-->
+                  <div class="form-group flex items-center form-check mb-6">
+                    <input type="checkbox"
+                      class="form-check-input appearance-none h-3 w-3 border border-gray-300 rounded-sm bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      id="exampleCheck1">
+                    <label class="form-check-label inline-block text-white" for="exampleCheck1">I would prefer not to receive marketing messages from Spotify</label>
+                  </div>
+                  <div class="form-group flex form-check w-full mb-6">
+                    <input type="checkbox"
+                      class="form-check-input appearance-none h-3.5 w-3.5 border border-gray-300 rounded-sm bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      id="exampleCheck1">
+                    <label class="form-check-label inline-block text-white" for="exampleCheck1">Share my registration data with Spotify's content providers for marketing purposes.</label>
+                  </div>
+                  <!-------------------------reCaptcha-->
+                  <div class="flex justify-center mb-6">
+                    <div class="g-recaptcha" data-theme="dark" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                  </div>
+                  <!-------------------T&C-->
+                  <div class="term-n-c mb-6">
+                    <h6 class="text-xs mb-2">By clicking on sign-up, you agree to Spotify's <a href="#" class="text-green-500 underline">Terms and Conditions of Use</a>.</h6>
+                    <h6 class="text-xs">To learn more about how Spotify collects, uses, shares and protects your personal data, please see <a href="#" class="text-green-500 underline"> Spotify's Privacy Policy</a>.</h6>
+                  </div>
+              <div class="submit-btn flex justify-center">
+                <button type="submit" class="mb-6 px-10
+                py-4
+                bg-green-500
+                text-black
+                font-semibold
+                text-base
+                leading-tight
+                rounded-full
+                shadow-md
+                transition
+                duration-150
+                ease-in-out">Sign Up</button>
+              </div>
+            </form>
+            <div class="log-link flex justify-center">
+                <span class="sm:text-base text-sm">Have an account? <a href="{% url 'login' %}" class="sm:text-base text-sm text-green-500 underline">Log in</a>.</span>
+            </div>
+          </div>
+    </section>
+    <script>
+ 
+      jQuery(function($){
+   
+          $( '.g-recaptcha' ).attr( 'data-theme', 'dark' );
+   
+          });
+   
+      </script>
+</body>
+</html>
